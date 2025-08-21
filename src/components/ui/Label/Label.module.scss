@@ -1,0 +1,24 @@
+@import '../../../assets/styles/base/variables';
+@import '../../../assets/styles/base/typography';
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: $weight-500;
+  margin-bottom: 0.5rem;
+}
+
+.labelContent {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.required {
+  color: $color-red;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: $gray-color;
+}

@@ -1,0 +1,14 @@
+@import './base/reset';
+@import './base/variables';
+@import './base/typography';
+
+@import './utiles/mixins';
+
+@import './layouts/maiLayout';
+@import './layouts/authLayout';
+
+@import './components/header';
+@import './pages/home';
+@import './pages/login';
+@import './pages/home';
+@import './pages/about'

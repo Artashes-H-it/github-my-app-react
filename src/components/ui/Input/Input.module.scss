@@ -1,0 +1,9 @@
+@import '../../../assets/styles/base/typography';
+@import '../../../assets/styles/base/variables';
+
+ input{
+    border-radius: 8px;
+    line-height: 33px;
+    padding: 0 10px;
+    border: 1px solid $light-gray-clolor;
+}

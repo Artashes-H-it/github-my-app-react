@@ -1,0 +1,10 @@
+@import '../../../assets/styles/base/variables';
+@import '../../../assets/styles/base/typography';
+
+.button {
+    color: $primary-color;
+    font-size: $font-size-14;
+    border: 1px solid $gray-color;
+    border-radius: 10px;
+    margin-top: 20px;
+}

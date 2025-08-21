@@ -1,0 +1,8 @@
+.login-form{
+    @include flex-coumn;
+}
+
+.social-block{
+     @include flex-space-between;
+     width: 100%;
+}
