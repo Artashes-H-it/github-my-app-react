@@ -2,7 +2,7 @@ name: Test React My App
 on: push
 jobs: 
   test:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get code from repository
         uses: action/checkout@v3
