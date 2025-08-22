@@ -44,7 +44,7 @@ jobs:
     steps:
       - name: Get code from repository
         uses: actions/checkout@v3
-      - nmae: Install Node json
+      - name: Install Node json
         uses: actions/setup-node@v3 
         with:  
           node-version: ${{ matrix.node-version }}
