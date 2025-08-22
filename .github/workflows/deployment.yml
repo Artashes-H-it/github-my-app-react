@@ -3,14 +3,19 @@ on:
   push:
     branches:
        - 'master' 
-    paths-ignore:
-       - '.github/workflows/*'   
+    # paths-ignore:
+    #    - '.github/workflows/*'   
 jobs: 
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Get code from repository
         uses: actions/checkout@v3
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/pakege-loc.json') }}
       - name: Install dependecies
         run: npm ci
       # - name: Test aplication
@@ -21,6 +26,11 @@ jobs:
     steps:
       - name: Get code from repository
         uses: actions/checkout@v3
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/pakege-loc.json') }}
       - name: Install dependecies
         run: npm ci
       # - name: Test aplication
@@ -31,6 +41,11 @@ jobs:
     steps:
       - name: Get code from repository
         uses: actions/checkout@v3
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/pakege-loc.json') }}
       - name: Install dependecies
         run: npm ci
       - name: Build aplication
