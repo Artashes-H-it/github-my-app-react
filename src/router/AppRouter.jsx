@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes, useNavigate, Navigate, Outlet } from 'react-router-dom';
+import { Route, Routes, Outlet } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import About from '../pages/About';
 import Home from '../pages/Home';
@@ -19,11 +19,8 @@ import AuthCallback from '../pages/auth/AuthCallback';
 
 const AppRouter = () => {
 
-const [user, setUser] = useState(null);
-const [loading, setLoading] = useState(true);
-const [isAuthenticated, setIsAuthenticated] = useState(false);
-const [isVerified, setIsVerified] = useState(false);
-const [isGuest, setIsGuest] = useState(false);
+ const [isVerified, setIsVerified] = useState(false);
+
 
 useEffect(() => {
     const token = localStorage.getItem('token');

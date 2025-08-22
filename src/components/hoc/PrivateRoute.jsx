@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Navigate, Outlet } from "react-router-dom"
+import { Navigate } from "react-router-dom"
 
 const hasToken = () => !!localStorage.getItem("token");
 const isVerified = () => localStorage.getItem("verified") === "true";

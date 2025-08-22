@@ -1,4 +1,4 @@
-import { useNavigate, useLocation, Navigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import React, { useMemo, useState } from 'react';
 import { Button, Label, Input } from '../../components/ui';
 import api from '../../api/axios';
@@ -24,7 +24,7 @@ const ResetPassword = () => {
         const [errors, setErrors] = useState({});
 
     const handleChage = (e) => {
-        const { name, value, type } = e.target;
+        const { name, value } = e.target;
 
         setFormData((prev) => ({
           ...prev,
@@ -73,7 +73,7 @@ const ResetPassword = () => {
             }
 
             }catch(error) {
-            const backendMessage = error?.response?.data?.message || 'Не удалось обновить пароль. Проверьте данные и попробуйте снова.';
+              error?.response?.data?.message || 'Не удалось обновить пароль. Проверьте данные и попробуйте снова.';
             }
     }
 
