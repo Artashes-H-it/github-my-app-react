@@ -1,23 +1,26 @@
 
 import { Link, useNavigate } from 'react-router-dom';
 import { Input, Button, Label} from "../../components/ui";
-import { useState } from 'react';
-import api from "../../api/axios"
-
+import { useState, useEffect } from 'react';
+import api from "../../api/axios";
 
 const Login = () => {
-    const [formData, setFormData] = useState({ email: '', password: '' });
+   const [formData, setFormData] = useState({ email: '', password: '' });
    const [errors, setErrors] = useState({});
    const navigate = useNavigate();
-
 
     const hendleSubmit = async (e) => {
          e.preventDefault();
 
           try {        
             const response = await api.post("/login", formData);
-            const { token } = response.data;
+            const { user, token } = response.data;
             localStorage.setItem("token", token);
+            localStorage.setItem("userId", user.id);
+            
+            if(user.email_verified_at != null){
+                localStorage.setItem("verified", true);
+            }
             navigate('/');
 
         }catch(error) {
@@ -54,14 +57,6 @@ const Login = () => {
        
        window.location.href = import.meta.env.VITE_GOOGLE_REDIRECT_URL;
        console.log(import.meta.env.VITE_GOOGLE_REDIRECT_URL);
-          try {        
-            //const response = await api.post(url);
-            //navigate('/');
-
-        }catch(error) {
-          //alert("Error submitting form", error);
-        }
-
     }
 
     const loginFacebook = () => {

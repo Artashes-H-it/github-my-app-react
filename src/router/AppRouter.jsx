@@ -16,7 +16,6 @@ import ForgotPassword from '../pages/auth/ForgotPassword';
 import ResetPassword from '../pages/auth/ResetPassword';
 import AuthCallback from '../pages/auth/AuthCallback';
 
-
 const AppRouter = () => {
 
  const [isVerified, setIsVerified] = useState(false);
@@ -26,13 +25,13 @@ useEffect(() => {
     const token = localStorage.getItem('token');
     const verified = localStorage.getItem('verified');
     if(token){
-      setIsAuthenticated(true);
+     // setIsAuthenticated(true);
     }
     
     if(verified == 'true') {
       setIsVerified(true);
     }
-console.log('dsaf44');
+
 }, []);
 
 // async function handleResendVerification() {

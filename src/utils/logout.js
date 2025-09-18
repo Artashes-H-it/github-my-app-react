@@ -5,7 +5,8 @@ const logout = async () => {
     let res =  await api.post('/logout');
     if(res.data.success == true){
       localStorage.removeItem('token');
-      localStorage.removeItem('user');
+      localStorage.removeItem('verified');
+      localStorage.removeItem('userId');
       window.location.href = '/'; 
     }
 }
