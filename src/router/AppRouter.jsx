@@ -15,6 +15,7 @@ import EmailResendVerify from '../pages/EmailResendVerify';
 import ForgotPassword from '../pages/auth/ForgotPassword';
 import ResetPassword from '../pages/auth/ResetPassword';
 import AuthCallback from '../pages/auth/AuthCallback';
+import AIAssistent from '../pages/AIAssistent';
 
 const AppRouter = () => {
 
@@ -78,6 +79,7 @@ useEffect(() => {
         }
       >
         <Route path="profile" element={<Profile />} />
+        <Route path="ai-assistent" element={<AIAssistent />} />
       </Route>
 
       {/* Catch-all route */}

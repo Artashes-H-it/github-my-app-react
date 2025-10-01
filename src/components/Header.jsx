@@ -11,6 +11,7 @@ const Header = () => {
          <Link to="/">Home</Link>
          <Link to="/about">About</Link>
          {isAuthenticatedFunc() && <Link to="/profile">Profile</Link>}
+         {isAuthenticatedFunc() && <Link to="/ai-assistent">Your AI assistent</Link>}
          {!isAuthenticatedFunc() ? <Link to="/login">Login</Link> : <Button onClick={() => logout()}>Logout</Button>}
          {!isAuthenticatedFunc() &&  <Link to="/register">Register</Link>}
        </nav>
