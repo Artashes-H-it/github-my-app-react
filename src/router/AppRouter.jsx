@@ -16,6 +16,9 @@ import ForgotPassword from '../pages/auth/ForgotPassword';
 import ResetPassword from '../pages/auth/ResetPassword';
 import AuthCallback from '../pages/auth/AuthCallback';
 import AIAssistent from '../pages/AIAssistent';
+import VideoMeeting from "../pages/VideoMeeting.jsx";
+
+
 
 const AppRouter = () => {
 
@@ -80,6 +83,7 @@ useEffect(() => {
       >
         <Route path="profile" element={<Profile />} />
         <Route path="ai-assistent" element={<AIAssistent />} />
+        <Route path="meetings" element={<VideoMeeting />} />
       </Route>
 
       {/* Catch-all route */}
